@@ -73,4 +73,18 @@ public class Zoo {
         else
             return z1;
     }
+
+    public boolean isZooFull(){
+        if(nbrCages == nbrAnimeaux)
+            return true;
+        else
+            return false;
+    }
+
+    public Zoo comparerZoo(Zoo z1, Zoo z2){
+        if(z1.nbrAnimeaux < z2.nbrAnimeaux)
+            return z2;
+        else
+            return z1;
+    }
 }
