@@ -61,35 +61,12 @@ public class Zoo {
     }
 
     public int searchAnimal(Animal animal){
-<<<<<<< HEAD:src/Zoo.java
-        for(int i=0; i<nbrAnimeaux; i++){
-            if(animals[i].name == animal.name){
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    public boolean isZooFull(){
-        if(nbrCages == nbrAnimeaux)
-            return true;
-        else
-            return false;
-    }
-
-    public Zoo comparerZoo(Zoo z1, Zoo z2){
-        if(z1.nbrAnimeaux < z2.nbrAnimeaux)
-            return z2;
-        else
-            return z1;
-=======
          for(int i=0; i<nbrAnimeaux; i++){
              if(animals[i].getName() == animal.getName()){
                  return i;
              }
          }
          return -1;
->>>>>>> 782944570e01a70c088605dfff943747ae9b65b3:src/tn/esprit/gestionzoo/entities/Zoo.java
     }
 
     public boolean isZooFull(){
