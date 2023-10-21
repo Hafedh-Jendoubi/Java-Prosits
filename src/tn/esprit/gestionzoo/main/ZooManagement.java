@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.entities.*;
 import java.util.Scanner;
 
 public class ZooManagement {
@@ -20,11 +22,10 @@ public class ZooManagement {
         System.out.println(zooName + " comporte " + nbrCages + " cages");*/
 
 
-        //-------------------------------- Prosit 2 -------------------------------------//
+        //-------------------------------- Prosit 2 + 3-------------------------------------//
 
-        Zoo myZoo = new Zoo("myZoo", "Tunis");
+        /*Zoo myZoo = new Zoo("myZoo", "Tunis");
         Zoo myZoo2 = new Zoo("myZoo2", "Ben Gerdan");
-        Zoo result;
         Animal a1 = new Animal("Otariidae", "Lion", 10, true);
         Animal a2 = new Animal("Canidae", "Wolf", 8, false);
         Animal a3 = new Animal("Canidae", "Wolf", 20, false);
@@ -42,7 +43,13 @@ public class ZooManagement {
         myZoo.removeAnimal(a1);
         myZoo.displayZoo();
         System.out.println(myZoo.isZooFull()); //False because myZoo ain't full.
-        result = myZoo.comparerZoo(myZoo, myZoo2);
-        System.out.println("La résultat de comparerZoo() est: " + result.name);
+        System.out.println(Zoo.comparerZoo(myZoo, myZoo2));*/
+
+        //-------------------------------- Prosit 4 -------------------------------------//
+
+        Zoo myZoo = new Zoo("", "Tunis"); //Just to check the empty name
+        Animal a1 = new Animal("Canidae", "Wolf", -1, true); //Checking the negative Age
+
+
     }
 }
