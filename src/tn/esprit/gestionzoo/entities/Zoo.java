@@ -70,10 +70,11 @@ public class Zoo {
     }
 
     public boolean isZooFull(){
-        if(NBR_CAGES == nbrAnimeaux)
+        if(NBR_CAGES == nbrAnimeaux){
             return true;
-        else
+        }else{
             return false;
+        }
     }
 
     static Zoo comparerZoo(Zoo z1, Zoo z2){
