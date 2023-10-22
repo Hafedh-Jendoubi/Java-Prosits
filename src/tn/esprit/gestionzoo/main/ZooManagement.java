@@ -47,9 +47,24 @@ public class ZooManagement {
 
         //-------------------------------- Prosit 4 -------------------------------------//
 
-        Zoo myZoo = new Zoo("", "Tunis"); //Just to check the empty name
-        Animal a1 = new Animal("Canidae", "Wolf", -1, true); //Checking the negative Age
+        /*Zoo myZoo = new Zoo("", "Tunis"); //Just to check the empty name
+        Animal a1 = new Animal("Canidae", "Wolf", -1, true); //Checking the negative Age*/
 
+        //-------------------------------- Prosit 5 -------------------------------------//
 
+        Aquatic a1 = new Aquatic();
+        Terrestrial t1 = new Terrestrial();
+        Dolphin d1 = new Dolphin();
+        Penguin p1 = new Penguin();
+
+        System.out.println(a1.toString()); //
+        System.out.println(t1.toString()); //
+                                           // => All of these variables have empty attributes due to Default Constructor.
+        System.out.println(d1.toString()); //
+        System.out.println(p1.toString()); //
+
+        a1.swim();
+        d1.swim(); //swim() function a ete redefini ici
+        p1.swim(); //swim() function n'a pas ete redefini ici
     }
 }
