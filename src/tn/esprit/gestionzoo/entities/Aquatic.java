@@ -24,7 +24,22 @@ public sealed class Aquatic extends Animal permits Dolphin, Penguin{
         return "Aquatic:\nFamily: " + family + "\nName: " + name + "\nAge: " + age + "\nisMammal: " + isMammal + "\nHabitat: " + habitat + "\n";
     }
 
+    public void display(){
+        System.out.println("Aquatic:\nFamily: " + family + "\nName: " + name + "\nAge: " + age + "\nisMammal: " + isMammal + "\nHabitat: " + habitat + "\n");
+    }
+
     public void swim(){
         System.out.println("This aquatic animal is swimming.\n");
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null)
+            return false;
+        if(obj instanceof Aquatic aquatic){
+            return name.equals(aquatic.name) && age == aquatic.age && habitat.equals(aquatic.habitat);
+        }
+
+        return false;
     }
 }

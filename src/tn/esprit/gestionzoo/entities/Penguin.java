@@ -22,4 +22,8 @@ public non-sealed class Penguin extends Aquatic {
     public String toString() {
         return "Penguin:\nFamily: " + family + "\nName: " + name + "\nAge: " + age + "\nisMammal: " + isMammal + "\nHabitat: " + habitat + "\nSwimming Depth: " + swimmingDepth + "\n";
     }
+
+    public void swim(){
+        System.out.println("This penguin is swimming.\n");
+    }
 }
