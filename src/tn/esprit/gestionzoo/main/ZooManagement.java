@@ -52,7 +52,7 @@ public class ZooManagement {
 
         //-------------------------------- Prosit 5 -------------------------------------//
 
-        Aquatic a1 = new Aquatic();
+        /*Aquatic a1 = new Aquatic();
         Terrestrial t1 = new Terrestrial();
         Dolphin d1 = new Dolphin();
         Penguin p1 = new Penguin();
@@ -65,6 +65,26 @@ public class ZooManagement {
 
         a1.swim();
         d1.swim(); //swim() function a ete redefini ici
-        p1.swim(); //swim() function n'a pas ete redefini ici
+        p1.swim(); //swim() function n'a pas ete redefini ici*/
+
+        //-------------------------------- Prosit 6 -------------------------------------//
+
+        Zoo myZoo = new Zoo("myZoo", "Tunis");
+        Aquatic a1 = new Aquatic("Mammal", "Dog", 5, true, "test");
+        Aquatic d1 = new Dolphin("Mammal", "Cat", 10, true, "test", 14.5f);
+        Aquatic p1 = new Penguin("Mammal", "Penguin", 5, false, "test1", 10.4f);
+        Aquatic p2 = new Penguin("Mammal", "Penguin", 5, false, "test2", 5.4f);
+        Aquatic p3 = new Penguin("Mammal", "Penguin", 5, false, "test1", 19f);
+
+        myZoo.addAquaticAnimal(a1);
+        myZoo.addAquaticAnimal(d1);
+        myZoo.addAquaticAnimal(p1);
+        myZoo.addAquaticAnimal(p2);
+        myZoo.addAquaticAnimal(p3);
+        myZoo.instruction27();
+        System.out.println(myZoo.maxPenguinSwimmingDepth()); //19.0 is the result
+        myZoo.displayNumberOfAquaticsByType(); // Number of Dolphins: 1 <br> Number of Penguins: 3
+        System.out.println(p1.equals(p2)); //false not the same habitat
+        System.out.println(p1.equals(p3)); //true
     }
 }
