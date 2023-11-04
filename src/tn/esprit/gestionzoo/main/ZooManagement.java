@@ -1,5 +1,8 @@
 package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.*;
+import tn.esprit.gestionzoo.exceptions.InvalidAgeException;
+import tn.esprit.gestionzoo.exceptions.ZooFullException;
+
 import java.util.Scanner;
 
 public class ZooManagement {
@@ -69,7 +72,7 @@ public class ZooManagement {
 
         //-------------------------------- Prosit 6 -------------------------------------//
 
-        Zoo myZoo = new Zoo("myZoo", "Tunis");
+        /*Zoo myZoo = new Zoo("myZoo", "Tunis");
         Aquatic a1 = new Aquatic("Mammal", "Dog", 5, true, "test");
         Aquatic d1 = new Dolphin("Mammal", "Cat", 10, true, "test", 14.5f);
         Aquatic p1 = new Penguin("Mammal", "Penguin", 5, false, "test1", 10.4f);
@@ -85,6 +88,25 @@ public class ZooManagement {
         System.out.println(myZoo.maxPenguinSwimmingDepth()); //19.0 is the result
         myZoo.displayNumberOfAquaticsByType(); // Number of Dolphins: 1 <br> Number of Penguins: 3
         System.out.println(p1.equals(p2)); //false not the same habitat
-        System.out.println(p1.equals(p3)); //true
+        System.out.println(p1.equals(p3)); //true*/
+
+        //-------------------------------- Prosit 7 -------------------------------------//
+
+        Zoo myZoo = new Zoo("myZoo", "Tunis");
+        Animal a1 = new Animal("Otariidae", "Lion", 10, true);
+        Animal a2 = new Animal("Canidae", "Wolf", 8, false);
+        Animal a3 = new Animal("Canidae", "Wolf", 20, false);
+        Animal a4 = new Animal("Otariidae", "Lion", 10, true);
+        Aquatic p3 = new Penguin("Mammal", "Penguin", -5, false, "test1", 19f);
+
+        try {
+            myZoo.addAnimal(a1);
+            myZoo.addAnimal(a2);
+            myZoo.addAnimal(a3);
+            myZoo.addAnimal(p3); //This throws a Negative Age Exception
+            myZoo.addAnimal(a4); //This throws a Full Zoo Exception
+        }catch(InvalidAgeException | ZooFullException ex){
+            System.err.println(ex.getMessage());
+        }
     }
 }
