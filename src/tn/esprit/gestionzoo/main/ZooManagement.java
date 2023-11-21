@@ -1,7 +1,8 @@
 package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.*;
-import tn.esprit.gestionzoo.exceptions.InvalidAgeException;
-import tn.esprit.gestionzoo.exceptions.ZooFullException;
+import tn.esprit.gestionzoo.exceptions.*;
+import tn.esprit.gestionzoo.interfaces.*;
+import tn.esprit.gestionzoo.enums.*;
 
 import java.util.Scanner;
 
@@ -92,7 +93,7 @@ public class ZooManagement {
 
         //-------------------------------- Prosit 7 -------------------------------------//
 
-        Zoo myZoo = new Zoo("myZoo", "Tunis");
+        /*Zoo myZoo = new Zoo("myZoo", "Tunis");
         Animal a1 = new Animal("Otariidae", "Lion", 10, true);
         Animal a2 = new Animal("Canidae", "Wolf", 8, false);
         Animal a3 = new Animal("Canidae", "Wolf", 20, false);
@@ -107,6 +108,17 @@ public class ZooManagement {
             myZoo.addAnimal(a4); //This throws a Full Zoo Exception
         }catch(InvalidAgeException | ZooFullException ex){
             System.err.println(ex.getMessage());
-        }
+        }*/
+
+        //-------------------------------- Prosit 8 -------------------------------------//
+
+        Aquatic a1 = new Aquatic("Mammal", "Dog", 5, true, "test");
+        Penguin p1 = new Penguin("Mammal", "Penguin", -5, false, "test1", 19f);
+        Terrestrial t1 = new Terrestrial();
+        Food m = Food.MEAT;
+
+        //There is no "a1.eatMeat" or whatever cause the methods are located in the subclasses
+        p1.eatMeat(m);
+        t1.eatMeat(m);
     }
 }

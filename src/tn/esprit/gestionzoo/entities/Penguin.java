@@ -1,6 +1,8 @@
 package tn.esprit.gestionzoo.entities;
+import tn.esprit.gestionzoo.enums.Food;
+import tn.esprit.gestionzoo.interfaces.Carnivore;
 
-public non-sealed class Penguin extends Aquatic {
+public non-sealed class Penguin extends Aquatic implements Carnivore<Food> {
     private float swimmingDepth;
 
     public Penguin(){}
@@ -25,5 +27,10 @@ public non-sealed class Penguin extends Aquatic {
 
     public void swim(){
         System.out.println("This penguin is swimming.\n");
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+        System.out.println(meat);
     }
 }

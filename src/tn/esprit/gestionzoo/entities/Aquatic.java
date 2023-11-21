@@ -1,7 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 
-// I thought about making it a "Sealed" class in order to make just create two sub-classes which are "Penguin" and "Dolphin". Don't know whether it's true or not, but I wanted to use it.
-public sealed class Aquatic extends Animal permits Dolphin, Penguin{
+// I can not use implements Carnivore<Food> Here cause Aquatic is a sealed class. Instead, I implemented it in Dolphin and Penguin the subclasses of Aquatic
+public sealed class Aquatic extends Animal permits Dolphin, Penguin {
     protected String habitat;
 
     public Aquatic(){}
