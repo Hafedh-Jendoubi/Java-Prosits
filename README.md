@@ -21,9 +21,9 @@ The project might have multiple branches: `main`, `DS-Révision`, `Prosit-3` etc
 * `main` contains aggregate code of all branches
 * `DS-Révision` contains the code of the DS uploaded on our classroom.
 * `Prosit-3` --> `Prosit-8` every branch contains the code of its own Prosit developing the Zoo Management Project.
-* `Prosit-9` contains the code of Employees Project.
+* `Prosit-9` --> `Prosit-10` contains the code of Employees Project.
 
-Down below, you can find the project structure:
+Down below, you can find the project structure of Zoo Management:
 
 ```
 	Java-Prosits
@@ -56,6 +56,32 @@ Down below, you can find the project structure:
 		|   └── Omnivore.java
 		└── main
                     └── ZooManagement.java
+```
+
+Down below, you can find the project structure of Employees Management:
+
+```
+	Java-Prosits
+	├── README.md
+	├── .idea
+	│   ├── workspace.xml
+	│   └── vsc.xml
+	└── Prosit-9
+		├── .idea
+		|   ├── .gitignore
+		|   ├── misc.xml
+		|   ├── modules.xml
+		|   └── vcs.xml
+		└── src
+		|   ├── Departement.java
+		|   ├── DepartementHashSet.java
+		|   ├── Employee.java
+		|   ├── IDEpartement.java
+		|   ├── IGestion.java
+		|   ├── Main.java
+		|   └── SocieteArrayList.java
+		├── .gitignore
+		└── Prosit-9.iml
 ```
 
 ### Tools Required
