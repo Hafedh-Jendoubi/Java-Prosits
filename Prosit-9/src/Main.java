@@ -1,7 +1,11 @@
+import java.util.Collection;
+import java.util.Collections;
 import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
+        /* ---------------------------------------- Prosit 09 ------------------------------------------------------ */
+
         /*SocieteArrayList S = new SocieteArrayList();
         Employee e1 = new Employee(1, "Jendoubi", "Hafedh", "J24", 16);
         Employee e2 = new Employee(2, "Jendoubi", "Majdi", "G40", 13);
@@ -27,13 +31,36 @@ public class Main {
 
         /* ---------------------------------------- Prosit 10 ------------------------------------------------------ */
 
-        DepartementHashSet D = new DepartementHashSet();
+        /*DepartementHashSet D = new DepartementHashSet();
 
         D.ajouterDepartement(new Departement(3, "J24", 15)); //Add Works
         D.ajouterDepartement(new Departement(2, "J23", 15));
         D.ajouterDepartement(new Departement(1, "J22", 15));
         D.displayDepartement(); //It works
         System.out.println(D.rechercherDepartement("J24"));
-        System.out.println(D.trierDepartementById()); //It works fine
+        System.out.println(D.trierDepartementById()); //It works fine*/
+
+        /* ---------------------------------------- Prosit 11 ------------------------------------------------------ */
+
+        AffectationHashMap AHM = new AffectationHashMap();
+        Employee e1 = new Employee(1, "Jendoubi", "Hafedh", "J24", 16);
+        Employee e2 = new Employee(2, "Jendoubi", "Majdi", "G40", 13);
+        Employee e3 = new Employee(3, "Klai", "Rayen", "A23", 15);
+        Departement d1 = new Departement(1, "J24", 10);
+        Departement d2 = new Departement(2, "J25", 10);
+
+        AHM.ajouterEmployeDepartement(e1, d1); //Add works
+        AHM.ajouterEmployeDepartement(e2, d1);
+        AHM.ajouterEmployeDepartement(e3, d2);
+        AHM.afficherEmployesEtDepartements(); //Display works
+        //Adding the same employee in different departments will result in a problem because Employee is a Key. It has to be unique.
+        AHM.supprimerEmploye(e2); //Delete works
+        AHM.afficherEmployes(); //Employees display works
+        AHM.afficherDepartments();
+        System.out.println(AHM.rechercherEmploye(e2)); //False cause we deleted e2. So, it works.
+        System.out.println(AHM.rechercherDepartement(d1)); //True so it works
+        System.out.println(AHM.trierMap()); //It Works
+        AHM.supprimerEmployeEtDepartement(e3, d2); // It works
+        AHM.afficherEmployesEtDepartements();
     }
 }
