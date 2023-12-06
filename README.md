@@ -1,5 +1,5 @@
 # Java-Prosits
-![Current Version](https://img.shields.io/badge/version-v1.1-blue)
+![Current Version](https://img.shields.io/badge/version-v1.2-blue)
 ![GitHub contributors](https://img.shields.io/github/contributors/madhur-taneja/README-Template)
 ![GitHub stars](https://img.shields.io/github/stars/Hafedh-Jendoubi/Java-Prosits)
 ![GitHub top language](https://img.shields.io/github/languages/top/Hafedh-Jendoubi/Java-Prosits)
@@ -21,7 +21,7 @@ The project might have multiple branches: `main`, `DS-Révision`, `Prosit-3` etc
 * `main` contains aggregate code of all branches
 * `DS-Révision` contains the code of the DS uploaded on our classroom.
 * `Prosit-3` --> `Prosit-8` every branch contains the code of its own Prosit developing the Zoo Management Project.
-* `Prosit-9` --> `Prosit-11` contains the code of Employees Project.
+* `Prosit-9` --> `Prosit-12` contains the code of Employees Project.
 
 Down below, you can find the project structure of Zoo Management:
 
@@ -77,9 +77,12 @@ Down below, you can find the project structure of Employees Management:
 		|   ├── Departement.java
 		|   ├── DepartementHashSet.java
 		|   ├── Employee.java
+		|   ├── Etudiant.java
+		|   ├── EtudiantManagement.java
 		|   ├── IDEpartement.java
 		|   ├── IGestion.java
 		|   ├── Main.java
+		|   ├── Management.java
 		|   └── SocieteArrayList.java
 		├── .gitignore
 		└── Prosit-9.iml
